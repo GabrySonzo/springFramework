@@ -20,6 +20,10 @@ public class Book {
    public String getTitle() {
        return title;
    }
+
+   public Publisher getPublisher(){
+        return publisher;
+   }
    
    // Other methods...
 }
