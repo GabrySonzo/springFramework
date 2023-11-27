@@ -1,26 +1,27 @@
 package it.itispaleocapa.sonzognig.myapp;
 
 import jakarta.persistence.*;
+
 @Entity
-public class Book {
+public class Publisher {
+    
    @Id
    @GeneratedValue(strategy = GenerationType.AUTO)
    private Long id;
    @Column(nullable = false, unique = false)
-   private String title;
-
-   @ManyToOne
-   @JoinColumn(name = "publisher", referencedColumnName = "id")
-   private Publisher publisher;
-
+   private String name;
+   
    public Long getId() {
        return id;
    }
    
-   public String getTitle() {
-       return title;
+   public String getName() {
+       return name;
    }
    
+   public String toString() {
+       return "Publisher: " + name;
+   }
    // Other methods...
 }
    
